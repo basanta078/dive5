@@ -6,12 +6,12 @@
 	    <input type="text" ng-model="keyword" placeholder="Search"  ng-change="search(keyword)">
 	  </label>
 	</div>
-	
-	<ion-list>
-	<ion-item ng-repeat="result in results">
-	    {{result.name}}
-	  </ion-item>
-	</ion-list>
+	<div class="list card">
+		<div class="item item-thumbnail-left" ng-repeat="result in results">
+	    	<img src="{{result.images[2].url}}">
+	    	<h2>{{result.name}}</h2>
+	  	</div>
+	</div>
 	{{queryTerm}}
   </ion-content>
 </ion-view>
