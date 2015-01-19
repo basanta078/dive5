@@ -60,5 +60,18 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams, Spotify) {
+  $scope.artistId = $stateParams.playlistId;
+  $scope.relatedArtists = [];
+  Spotify.getRelatedArtists($scope.artistId).then(function (data) {
+    if (data.artists && data.artists.length){
+        artists = [];
+        data.artists.forEach(function (artist){
+          artists.push(artist);
+        })
+        $scope.relatedArtists = artists;
+      }
+  console.log(artists);
+});
+
 });
