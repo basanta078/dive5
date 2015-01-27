@@ -1,10 +1,15 @@
 <ion-view view-title="{{artistId}}">
   <ion-content>
-    <div class="list">
+  <div class="list list-inset" >
+			<a class="item" ng-repeat="artistTrack in artistTracks" ng-click="playSong(artistTrack.preview_url)" on-hold="onHold(artistTrack.name)">
+		    	<h2>{{artistTrack.name}}</h2>
+		    </a>
+		</div>	
+    <div class="list list-inset">
 			<a class="item item-thumbnail-left" ng-repeat="relatedArtist in relatedArtists" href="#/app/playlists/{{relatedArtist.id}}">
 				<img src="{{relatedArtist.images[2].url}}">
 		    	<h2>{{relatedArtist.name}}</h2>
-		    	<p>{{relatedArtist.id}}<p>
+		    	<p>{{relatedArtist.popularity}}<p>
 		    </a>
 		</div>	
   </ion-content>

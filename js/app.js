@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'spotify'])
     views: {
       'menuContent': {
         templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
+        controller: 'ArtistCtrl'
       }
     }
   });
