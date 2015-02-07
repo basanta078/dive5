@@ -14,6 +14,8 @@ angular.module('starter')
         })
         $scope.results = artists;
       }
-    });  
+      console.log($scope.results.length);
+    });
+
   }; 
 }]);

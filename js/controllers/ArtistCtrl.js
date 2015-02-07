@@ -1,14 +1,10 @@
 angular.module('starter')
 
-.controller('ArtistCtrl', [ '$scope', '$stateParams', 'Spotify' ,
-  function($scope, $stateParams, Spotify) {
+.controller('ArtistCtrl', [ '$scope', '$stateParams', 'Spotify', 'favorites',
+  function($scope, $stateParams, Spotify, favorites) {
   $scope.artistId = $stateParams.playlistId;
   $scope.relatedArtists = [];
   $scope.artistTracks = [];
-  favorites = {
-      name: []
-    };
-
 
   Spotify.getRelatedArtists($scope.artistId).then(function (data) {
     if (data.artists && data.artists.length){
@@ -30,13 +26,7 @@ angular.module('starter')
   };
 
   $scope.onHold  = function(trackName){
-
-    var favorites = JSON.parse(window.localStorage['favorites'] || '{"name": [] }');
-    
-    favorites.name.push(trackName);
-    console.log(favorites);
-
-    window.localStorage['favorites'] = JSON.stringify(favorites);
+    favorites.add(trackName);
 
   };
 

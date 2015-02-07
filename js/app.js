@@ -52,8 +52,8 @@ angular.module('starter', ['ionic', 'spotify'])
       url: "/playlists",
       views: {
         'menuContent': {
-          templateUrl: "templates/playlists.html",
-          controller: 'PlaylistsCtrl'
+          templateUrl: "templates/dive5list.html",
+          controller: 'dive5Ctrl'
         }
       }
     })
