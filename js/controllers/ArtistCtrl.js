@@ -1,7 +1,7 @@
 angular.module('starter')
 
-.controller('ArtistCtrl', [ '$scope', '$stateParams', 'Spotify', 'favorites',
-  function($scope, $stateParams, Spotify, favorites) {
+.controller('ArtistCtrl', [ '$scope', '$stateParams', 'Spotify', 'favorites', 'player',
+  function($scope, $stateParams, Spotify, favorites, player) {
   $scope.artistId = $stateParams.playlistId;
   $scope.relatedArtists = [];
   $scope.artistTracks = [];
@@ -18,11 +18,7 @@ angular.module('starter')
   audioObject = null;
   
   $scope.playSong  = function(url){
-    if (audioObject){
-      audioObject.pause();
-    }
-    audioObject = new Audio(url);
-    audioObject.play();
+    player.playSong(url);
   };
 
   $scope.onHold  = function(trackName){
