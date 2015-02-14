@@ -8,7 +8,7 @@ angular.module('starter.controllers')
 		return self.favs;
 	};
 
-	this.add = function(trackname){
+	this.add = function(trackname, trackurl){
 		dup = false
 		this.favs.forEach(function (track){
 			if (track === trackname){
@@ -17,9 +17,16 @@ angular.module('starter.controllers')
 			}
 
 		});
+
+
+		var newFav =  {
+            "name": trackname,
+            "url": trackurl
+        };
+
 		if (dup)
 			return;
-		self.favs.push(trackname);
+		self.favs.push(newFav);
     	window.localStorage['favorites'] = JSON.stringify(this.favs);	
 	};
 

@@ -21,8 +21,8 @@ angular.module('starter.controllers')
     player.playSong(url);
   };
 
-  $scope.onHold  = function(trackName){
-    favorites.add(trackName);
+  $scope.onHold  = function(trackName, previewurl){
+    favorites.add(trackName, previewurl);
 
   };
 

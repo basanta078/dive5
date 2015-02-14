@@ -1,7 +1,7 @@
 <ion-view view-title="{{artistId}}">
   <ion-content>
   <div class="list list-inset" >
-			<a class="item" ng-repeat="artistTrack in artistTracks" ng-click="playSong(artistTrack.preview_url)" on-hold="onHold(artistTrack.name)">
+			<a class="item" ng-repeat="artistTrack in artistTracks" ng-click="playSong(artistTrack.preview_url)" on-hold="onHold(artistTrack.name, artistTrack.preview_url)">
 		    	<h2>{{artistTrack.name}}</h2>
 		    </a>
 		</div>	
