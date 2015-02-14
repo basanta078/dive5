@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('starter.controllers')
 
 .controller('SearchCtrl', ['$scope', 'Spotify', 
   function($scope, Spotify){

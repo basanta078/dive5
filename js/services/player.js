@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('starter.controllers')
 .service('player', function(){
 	var self = this;
 

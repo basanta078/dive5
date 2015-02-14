@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('starter.controllers')
 
 .controller('ArtistCtrl', [ '$scope', '$stateParams', 'Spotify', 'favorites', 'player',
   function($scope, $stateParams, Spotify, favorites, player) {

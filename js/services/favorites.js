@@ -1,8 +1,8 @@
-angular.module('starter')
+angular.module('starter.controllers')
 .service('favorites', function(){
 	var self = this;
 
-	this.favs = JSON.parse(window.localStorage['favorites']);
+	this.favs = JSON.parse(window.localStorage['favorites'] || '[]');
 
 	this.getlist = function(){
 		return self.favs;

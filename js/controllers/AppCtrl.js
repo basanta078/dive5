@@ -1,7 +1,7 @@
-angular.module('starter')
+angular.module('starter.controllers')
 
-.controller('AppCtrl', ['$scope', '$ionicModal', '$timeout', 
-  function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', ['$scope', '$ionicModal', '$timeout', '$state', '$ionicViewService',
+  function($scope, $ionicModal, $timeout, $state, $ionicViewService) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -32,4 +32,11 @@ angular.module('starter')
       $scope.closeLogin();
     }, 1000);
   };
+
+  $scope.clear = function(){
+    $ionicViewService.nextViewOptions({
+      disableBack: true
+    });
+    $state.go('app.search');
+  }
 }]);
