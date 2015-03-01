@@ -58,10 +58,10 @@ angular.module('starter', ['ionic', 'starter.controllers','spotify'])
     })
 
   .state('app.single', {
-    url: "/playlists/:playlistId",
+    url: "/artist/:artistid",
     views: {
       'menuContent': {
-        templateUrl: "templates/playlist.html",
+        templateUrl: "templates/artist.html",
         controller: 'ArtistCtrl'
       }
     }

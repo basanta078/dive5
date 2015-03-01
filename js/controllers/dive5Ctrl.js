@@ -9,13 +9,16 @@ angular.module('starter.controllers')
 		    player.playSong(url);
 		  };
 
-		 // $scope.playAll = function(){
-		 //  	var list = favorites.getlist();
-		 //  	list.forEach(function (track){
-		 //  		console.log(track);
-			// 	player.playSong(track.url);
-			// });
-		 //  }
+		 /*
+		 $scope.playAll = function(){
+		   	var list = favorites.getlist();
+		   	list.forEach(function (track){
+		   		console.log(track);
+			 	player.playSong(track.url);
+			 });
+		 }
+		 */
+
 
   
 }]);

@@ -3,9 +3,8 @@
     <ion-list>
       <ion-item ng-repeat="favorite in favorite" ng-click="playSong(favorite.url)" >
         {{favorite.name}}
-
       </ion-item>
     </ion-list>
-    <button class="button button-icon button-clear ion-navicon-round" ng-click="playAll()"></button>
+    <button class="button button-icon button-clear ion-navicon-round" ng-click="clearAll()"></button>
   </ion-content>
 </ion-view>
